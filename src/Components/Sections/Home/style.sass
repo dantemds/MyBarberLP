@@ -1,0 +1,201 @@
+@use '../../../styles/variables'
+@use '../../../styles/mixins'
+
+#home
+    position: relative
+    width: 100%
+    z-index: 10
+
+    .MainContent
+        display: flex
+        margin: auto
+        max-width: 1200px
+
+        .contentLeft
+            display: flex
+            flex-direction: column
+            max-width: 635px
+            gap: 2rem
+            padding: 8rem 0
+
+            h1
+                // color: #202020
+                font-size: 2rem
+                line-height: 2rem
+                font-family: 'Outfit', sans-serif
+
+            h2
+                color: #707070
+                line-height: 1rem
+                font-size: .8rem
+                font-weight: 400
+                width: 320px
+
+            .BtnCta
+                width: 300px
+                color: #fff
+                background-color: #B78860
+                border: 2px solid #B78860
+                border-radius: 20px
+                border-radius: 3px
+                padding: .5rem 1rem
+                text-align: center
+                line-height: 1rem
+                font-weight: 600
+                font-size: .8rem
+                cursor: pointer
+                box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, .034), 0 6.7px 5.3px rgba(0, 0, 0, .048), 0 12.5px 10px rgba(0, 0, 0, .06), 0 22.3px 17.9px rgba(0, 0, 0, .072), 0 41.8px 33.4px rgba(0, 0, 0, .086), 0 100px 80px rgba(0, 0, 0, .12)
+
+            .BtnCta:hover
+                color: #B78860
+                background-color: transparent
+
+            .SpanPreco
+                color: #707070
+                width: 300px
+                font-size: .6rem
+                text-align: center
+                margin-top: -2rem
+
+        .contentRight
+            display: flex
+            justify-content: end
+            align-items: center
+            gap: 2rem
+            width: 100%
+            padding: 2rem 0
+
+            .cardPhone
+                width: 200px
+                height: 200px
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                background-color: #fff
+                border-radius: 2px
+                border: 1px solid #B78860
+                box-shadow: 3px 3px 8px rgba(20, 20, 20, .3)  
+
+                h1
+                    color: #B78860
+                    font-size: .9rem
+                    width: 100%
+                    text-align: center
+                    margin-top: 1.2rem
+
+                p
+                    color: #707070
+                    font-size: .7rem
+                    line-height: 1rem
+                    text-align: justify
+                    padding: 0 1.3rem
+
+                button, .ctaBarbeariaModelo
+                    width: 80%
+                    color: #fff
+                    background-color: #B78860
+                    border: 2px solid #B78860
+                    border-radius: 3px
+                    text-align: center
+                    font-weight: 600
+                    font-size: .7rem
+                    line-height: 1rem
+                    padding: .3rem 0
+                    margin: 0 auto
+                    margin-bottom: .5rem
+                    cursor: pointer
+
+                button:hover
+                    color: #B78860
+                    background-color: transparent
+
+    .BottomContent
+        color: #fff
+        height: auto
+        margin-top: -5rem
+        background-image: linear-gradient(to bottom right, rgb(20, 20, 20), #505050)
+        border-top: 3px solid #B78860
+
+        .wrapCols
+            display: flex
+            justify-content: space-between
+            margin: auto
+            max-width: 1200px
+
+            .col
+                max-width: 450px
+                padding: 4rem 0
+
+                h2
+                    color: #fff
+                    font-size: 1.4rem
+                    font-weight: 700
+                    margin-bottom: 1rem
+
+                ul
+                    font-weight: 300
+                    font-size: .8rem
+                    line-height: 1rem
+
+                    li
+                        display: flex
+                        margin-bottom: 1rem
+
+                        a
+                            color: #fff
+
+                        svg
+                            color: #B78860
+                            height: .8rem
+                            width: .8rem
+                            margin-right: 4px
+                            margin-bottom: -.1rem
+
+                    .linkWpp
+                        color: #B78860
+                        background-color: transparent
+                        border: 2px solid #B78860
+                        border-radius: 3px
+                        padding: .5rem 1rem
+                        font-weight: 600
+                        cursor: pointer
+
+                    .linkWpp:hover
+                        background-color: #B78860
+                        color: #fff
+
+@media (max-width: 1200px )
+    #home
+        .MainContent
+            padding: 0 2rem
+
+        .BottomContent
+            padding: 0 2rem
+
+            .wrapCols
+                gap: 1.5rem
+
+@media (max-width: 768px )
+    #home
+        .MainContent
+            flex-direction: column
+            padding: 2rem
+
+            .contentLeft
+                padding: 4rem 0
+
+                h1, h2, .BtnCta, .SpanPreco
+                    width: 100%
+
+            .contentRight
+                flex-direction: column
+
+        .BottomContent
+            padding: 2rem 0
+
+            .wrapCols
+                flex-direction: column
+                margin: 0 2rem
+
+                .col
+                    padding: 2rem 0

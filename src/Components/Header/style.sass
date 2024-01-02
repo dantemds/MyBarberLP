@@ -1,0 +1,62 @@
+@use '../../styles/variables'
+
+#headerId
+    // background: orangered
+    width: 100%
+    border-bottom: 1px solid rgba(20, 20, 20, .5)
+    padding: 1rem 0
+
+    .content
+        max-width: 1200px
+        display: flex
+        margin: auto
+        padding: 0 2rem
+        justify-content: space-between
+        align-content: center
+
+        a
+            color: #202020
+            display: flex
+            margin: auto 0
+        nav 
+            // background: green
+            display: flex
+            align-content: center
+            gap: 1rem
+            
+
+
+            .btnEntrarContato
+                color: #B78860
+                background-color: transparent
+                border: 2px solid #B78860
+                border-radius: 3px
+                padding: .5rem 1rem
+                font-size: .8rem
+                font-weight: 600
+                line-height: 1rem
+                cursor: pointer
+
+            .btnEntrarContato:hover
+                background-color: #B78860
+                color: #fff
+
+            
+            .btnCliente
+                border: none
+                color: #202020
+                font-weight: 600
+                font-size: .8rem
+                background-color: transparent
+                cursor: pointer     
+
+@media (max-width: 768px )
+    #headerId
+
+        .content
+            flex-flow: column
+            align-items: center
+            gap: 1rem
+
+            nav
+                display: none
